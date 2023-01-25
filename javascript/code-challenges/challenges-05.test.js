@@ -305,7 +305,7 @@ const extractStats = (snorlaxData) => {
   return snorlaxData.stats.reduce((accumulator, currentValue) => {
     return {
       ...accumulator,
-    [currentValue.stat.name] : currentValue.baseStat
+      [currentValue.stat.name] : currentValue.baseStat
     };
   }, {});
 };
