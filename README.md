@@ -2,6 +2,12 @@
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
+## Table of Contents
+
+### 401
+
+[reverseArray](java\reverseArray)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
