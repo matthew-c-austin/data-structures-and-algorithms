@@ -163,6 +163,6 @@ public class LinkedListTest
     sut.insertAtBeginning(1);
     sut.insertAtBeginning(2);
     sut.insertAtBeginning(3);
-    assertTrue(sut.deleteNode(4));
+    assertFalse(sut.deleteNode(4));
   }
 }
