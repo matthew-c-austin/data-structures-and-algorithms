@@ -87,6 +87,31 @@ public class LinkedList
     return false;
   }
 
+  // We'll make this method return a boolean for whether the operation was successful or not
+  public boolean deleteNode(int valueToDelete) {
+
+    if (this.head == null) {
+      return false;
+    }
+
+    if (this.head.value == valueToDelete) {
+      this.head = this.head.next;
+      return true;
+    }
+
+    Node current = this.head;
+
+    while (current.next != null) {
+      if (current.next.value == valueToDelete) {
+        current.next = current.next.next;
+        return true;
+      }
+      current = current.next;
+    }
+
+    return false;
+  }
+
   public boolean includes(int value) {
     Node current = this.head;
 

@@ -29,6 +29,9 @@ No whiteboard was created for this class implementation.
 - insert after
   - Time: O(n)
   - Space: O(1)
+- delete node
+  - Time: O(n)
+  - Space: O(1)
 
 ## Solution
 

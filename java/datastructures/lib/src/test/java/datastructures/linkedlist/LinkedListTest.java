@@ -147,4 +147,22 @@ public class LinkedListTest
     boolean result = sut.insertAfter(5, 4);
     assertFalse(result);
   }
+
+  @Test void testDeleteNodeReturnsTrue()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    assertTrue(sut.deleteNode(3));
+  }
+
+  @Test void testDeleteNodeReturnsFalse()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    assertTrue(sut.deleteNode(4));
+  }
 }
