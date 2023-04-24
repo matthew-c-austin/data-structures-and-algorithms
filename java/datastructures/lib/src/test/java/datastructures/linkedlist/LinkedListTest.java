@@ -71,4 +71,80 @@ public class LinkedListTest
     String actual = sut.toString();
     assertEquals(expected, actual);
   }
+
+  @Test void testAppendOneNode()
+  {
+    LinkedList sut = new LinkedList();
+    sut.append(4);
+    assertEquals(4, sut.head.value);
+  }
+
+  @Test void testAppendMultipleNode()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    sut.append(4);
+    assertEquals(4, sut.head.next.next.next.value);
+  }
+
+  @Test void testLinkedListInsertBeforeInMiddle()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    sut.insertBefore(1, 4);
+    assertEquals(sut.head.next.next.value, 4);
+  }
+
+  @Test void testLinkedListInsertBeforeAtHead()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertBefore(1, 4);
+    assertEquals(sut.head.value, 4);
+  }
+
+  @Test void testLinkedListInsertBeforeFails()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    boolean result = sut.insertBefore(5, 4);
+    assertFalse(result);
+  }
+
+  @Test void testLinkedListAfterInMiddle()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    sut.insertAfter(2, 3);
+    assertEquals(sut.head.next.next.value, 3);
+  }
+
+  @Test void testLinkedListAfterLast()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    sut.insertAfter(1, 4);
+    assertEquals(sut.head.next.next.next.value, 4);
+    assertNull(sut.head.next.next.next.next);
+  }
+
+  @Test void testLinkedListInsertAfterFails()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(3);
+    boolean result = sut.insertAfter(5, 4);
+    assertFalse(result);
+  }
 }
