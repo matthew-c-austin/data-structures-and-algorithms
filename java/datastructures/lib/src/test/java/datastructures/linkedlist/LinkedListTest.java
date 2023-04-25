@@ -2,6 +2,8 @@ package datastructures.linkedlist;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest
@@ -165,4 +167,57 @@ public class LinkedListTest
     sut.insertAtBeginning(3);
     assertFalse(sut.deleteNode(4));
   }
+
+  @Test void testKthFromEndThrowsIllegalArgumentException()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(8);
+    sut.insertAtBeginning(3);
+    sut.insertAtBeginning(1);
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(6));
+  }
+
+  @Test void testKthFromEndSameSize()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(8);
+    sut.insertAtBeginning(3);
+    sut.insertAtBeginning(1);
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(4));
+  }
+
+  @Test void testKthFromEndThrowsIllegalArgumentExceptionNegativeNumber()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(8);
+    sut.insertAtBeginning(3);
+    sut.insertAtBeginning(1);
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(-2));
+  }
+
+  @Test void testKthFromEndSizeOfOne()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(1);
+    assertEquals(1, sut.kthFromEnd(0));
+  }
+
+  @Test void testKthFromEnd()
+  {
+    LinkedList sut = new LinkedList();
+    sut.insertAtBeginning(2);
+    sut.insertAtBeginning(8);
+    sut.insertAtBeginning(3);
+    sut.insertAtBeginning(1);
+    assertEquals(3, sut.kthFromEnd(2));
+  }
+  @Test void testKthFromEndThrowsNoSuchElementExceptionException()
+  {
+    LinkedList sut = new LinkedList();
+    assertThrows(NoSuchElementException.class, () -> sut.kthFromEnd(1));
+  }
+
 }
