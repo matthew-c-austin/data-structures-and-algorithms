@@ -1,5 +1,9 @@
 package datastructures.linkedlist;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.NoSuchElementException;
+
 public class LinkedList
 {
   Node head = null;
@@ -123,6 +127,38 @@ public class LinkedList
     }
 
     return false;
+  }
+
+
+  public int kthFromEnd(int k) {
+    // Check that the head is not null
+    if (this.head == null) {
+      throw new NoSuchElementException("The list is empty");
+    }
+
+    // Check that k is a positive integer or 0
+    if (k < 0) {
+      throw new IllegalArgumentException("k must be greater than or equal to 0");
+    }
+
+    Map<Integer, Integer> nodeValueMap= new HashMap<>();
+    Node current = this.head;
+    int index = 0;
+
+    while (current != null) {
+      nodeValueMap.put(index, current.value);
+      index++;
+      current = current.next;
+    }
+
+
+    if (k >= index) {
+      throw new IllegalArgumentException("k must be less than the linked list size");
+    }
+    int size = index;
+    int desiredIndex = size - k - 1;
+
+    return nodeValueMap.get(desiredIndex);
   }
 
   @Override
