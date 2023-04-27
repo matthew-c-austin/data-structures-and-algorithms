@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedList
 {
-  Node head = null;
+  public Node head = null;
 
   public void insertAtBeginning(int value) {
     Node newNode = new Node(value);
