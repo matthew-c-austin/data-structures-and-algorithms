@@ -18,6 +18,8 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Singly Linked List Kth](java\datastructures\Singly-Linked-List-kth-README.md)
 
+[Stacks and Queues Implementation](java\datastructures\Stacks-and-Queues-README.md)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
