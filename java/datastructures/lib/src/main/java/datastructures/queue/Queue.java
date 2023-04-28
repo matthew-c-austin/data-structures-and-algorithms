@@ -9,24 +9,40 @@ public class Queue<T>
 
     void enqueue(T valueToEnqueue)
     {
-        // TODO: implement me
+      Node<T> newNode = new Node<>(valueToEnqueue);
+      if (back != null) {
+        back.next = newNode;
+      }
+      back = newNode;
+      if (isEmpty()) {
+        front = back;
+      }
     }
 
     T dequeue()
     {
-        // TODO: implement me
-        return null;
+      if (isEmpty()) {
+        throw new RuntimeException("Queue is empty");
+      }
+
+      Node<T> dequeuedNode = front;
+      front = front.next;
+      dequeuedNode.next = null;
+
+        return dequeuedNode.value;
     }
 
     T peek()
     {
-        // TODO: implement me
-        return null;
+        if (isEmpty()) {
+          throw new RuntimeException("Queue is empty.");
+        }
+
+        return front.value;
     }
 
     boolean isEmpty()
     {
-        // TODO: implement me
-        return false;
+        return front == null;
     }
 }
