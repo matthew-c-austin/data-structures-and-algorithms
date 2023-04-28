@@ -14,7 +14,11 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Singly Linked List Implementation](java\datastructures\Singly-Linked-List-README.md)
 
-[Linked List Insertion](java\datastructures\Linked-List-Insertions-README.md)
+[Singly Linked List Insertion](java\datastructures\Linked-List-Insertions-README.md)
+
+[Singly Linked List Kth](java\datastructures\Singly-Linked-List-kth-README.md)
+
+[Stacks and Queues Implementation](java\datastructures\Stacks-and-Queues-README.md)
 
 ## Repository Quick Tour and Usage
 
