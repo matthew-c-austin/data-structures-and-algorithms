@@ -24,7 +24,7 @@ public class Stack<T>
         return poppedNode.value;
     }
 
-    T peek()
+    public T peek()
     {
       if (isEmpty()) {
         throw new RuntimeException("Stack is empty.");
