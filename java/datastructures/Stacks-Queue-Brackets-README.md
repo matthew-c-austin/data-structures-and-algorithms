@@ -17,7 +17,7 @@ There are 3 types of brackets:
 
 ## Whiteboard Process
 
-![Whiteboard Image](cc12.png)
+![Whiteboard Image](cc13.png)
 
 ## Approach & Efficiency
 
