@@ -3,6 +3,7 @@ package datastructures.trees;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -58,5 +59,24 @@ class BinaryTreeTest {
 
     int expectedMax = 11;
     assertEquals(expectedMax, tree.getMax());
+  }
+
+  @Test
+  void testBreadthFirstTraversal() {
+    BinaryTree<Integer> tree = new BinaryTree<>(2);
+
+    // Adding elements to the tree based on the given bread-first traversal
+    // [2,7,5,2,6,9,5,11,4]
+    tree.add(7);
+    tree.add(5);
+    tree.add(2);
+    tree.add(6);
+    tree.add(9);
+    tree.add(5);
+    tree.add(11);
+    tree.add(4);
+
+    List<Integer> expectedList = Arrays.asList(2, 7, 5, 2, 6, 9, 5, 11, 4);
+    assertEquals(expectedList, tree.breadthFirstTraversal());
   }
 }

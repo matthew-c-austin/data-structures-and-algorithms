@@ -1,4 +1,4 @@
-# Binary Tree and BST Implementation
+# Binary Tree getMax()
 
 ## Features
 
