@@ -10,7 +10,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     this.root = add(this.root, value);
   }
 
-  private Node<T> add(Node<T> node, T value) {
+  protected Node<T> add(Node<T> node, T value) {
     if (node == null) {
       return new Node<>(value);
     }

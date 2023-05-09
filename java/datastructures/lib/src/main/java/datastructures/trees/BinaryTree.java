@@ -1,7 +1,9 @@
 package datastructures.trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree<T extends Comparable<T>> {
   protected Node<T> root;
@@ -52,6 +54,57 @@ public class BinaryTree<T extends Comparable<T>> {
     output.add(node.value);
   }
 
+  public void add(T value) {
+    Queue<Node<T>> queue = new LinkedList<>();
+    this.root = add(this.root, value, queue);
+  }
+
+  private Node<T> add(Node<T> node, T value, Queue<Node<T>> queue) {
+    if (node == null) {
+      return new Node<>(value);
+    }
+
+    if (node.left == null) {
+      node.left = new Node<>(value);
+      return node;
+    } else if (node.right == null) {
+      node.right = new Node<>(value);
+      return node;
+    } else {
+      queue.add(node.left);
+      queue.add(node.right);
+      add(queue.poll(), value, queue);
+    }
+
+    return node;
+  }
+
+  public List<T> breadthFirstTraversal() {
+    List<T> output = new ArrayList<>();
+
+    if (this.root == null) {
+      return output;
+    }
+
+    Queue<Node<T>> queue = new LinkedList<>();
+    queue.add(this.root);
+
+    while (!queue.isEmpty()) {
+      Node<T> current = queue.poll();
+      output.add(current.value);
+
+      if(current.left != null) {
+        queue.add(current.left);
+      }
+
+      if(current.right != null) {
+        queue.add(current.right);
+      }
+    }
+
+    return output;
+  }
+
   public T getMax() {
     if (this.root == null) {
       throw new RuntimeException("Tree is empty");
@@ -82,4 +135,5 @@ public class BinaryTree<T extends Comparable<T>> {
   public Node<T> getRoot() {
     return root;
   }
+
 }
