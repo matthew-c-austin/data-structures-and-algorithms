@@ -20,6 +20,18 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Stacks and Queues Implementation](java\datastructures\Stacks-and-Queues-README.md)
 
+[Pseudo Queue](java\datastructures\Stacks-Queue-Pseudo-README.md)
+
+[Animal Shelter](java\datastructures\Stacks-Queue-Animal-Shelter-README.md)
+
+[Brackets](java\datastructures\Stacks-Queue-Brackets-README.md)
+
+[Binary Tree and BST Implementation](java\datastructures\Trees-README.md)
+
+[Binary Tree getMax](java\datastructures\Trees-Max-README.md)
+
+[Binary Tree Bread-First Traversal](java\datastructures\Trees-Breadth-First-README.md)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
