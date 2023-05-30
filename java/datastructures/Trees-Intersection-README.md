@@ -18,6 +18,6 @@ Using your Hashmap implementation as a part of your algorithm, return a set of v
 
 [Link to Tree Intersection Class](lib/src/main/java/codechallenges/TreeIntersection.java)
 
-[Link to Binary Tree Test](lib/src/test/java/datastructures/trees/TreeIntersectionTest.java)
+[Link to Binary Tree Test](lib/src/test/java/codechallenges/TreeIntersectionTest.java)
 
 
