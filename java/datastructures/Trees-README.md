@@ -55,11 +55,11 @@ No whiteboard was created for this class implementation.
 
 [Link to Binary Tree Class](lib/src/main/java/datastructures/trees/BinaryTree.java)
 
-[Link to Binary Tree Test](lib/src/main/java/datastructures/trees/BinaryTreeTest.java)
+[Link to Binary Tree Test](lib/src/test/java/datastructures/trees/BinaryTreeTest.java)
 
 ### BST Solution
 
 [Link to BST Class](lib/src/main/java/datastructures/trees/BinarySearchTree.java)
 
-[Link to BST Test](lib/src/main/java/datastructures/trees/BinarySearchTreeTest.java)
+[Link to BST Test](lib/src/test/java/datastructures/trees/BinarySearchTreeTest.java)
 

@@ -22,6 +22,6 @@ This method uses the breadth-first approach, obviously, which entails defining  
 
 [Link to Binary Tree Class](lib/src/main/java/datastructures/trees/BinaryTree.java)
 
-[Link to Binary Tree Test](lib/src/main/java/datastructures/trees/BinaryTreeTest.java)
+[Link to Binary Tree Test](lib/src/test/java/datastructures/trees/BinaryTreeTest.java)
 
 
