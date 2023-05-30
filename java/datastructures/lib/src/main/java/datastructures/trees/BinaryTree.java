@@ -9,7 +9,9 @@ public class BinaryTree<T extends Comparable<T>> {
   protected Node<T> root;
 
   public BinaryTree(T value) {
-    root = new Node<>(value);
+    if (value != null) {
+      root = new Node<>(value);
+    }
   }
 
   public List<T> preOrderTraversal() {

@@ -22,6 +22,6 @@ Find the maximum value stored in the tree. You can assume that the values stored
 
 [Link to Binary Tree Class](lib/src/main/java/datastructures/trees/BinaryTree.java)
 
-[Link to Binary Tree Test](lib/src/main/java/datastructures/trees/BinaryTreeTest.java)
+[Link to Binary Tree Test](lib/src/test/java/datastructures/trees/BinaryTreeTest.java)
 
 
