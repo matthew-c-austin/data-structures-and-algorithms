@@ -38,6 +38,14 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Quick Sort](java/sorting/quick/README.md)
 
+[Hash Table](java/datastructures/Hash-Table-README.md)
+
+[Hash Table](java/datastructures/Hash-Table-README.md)
+
+[Tree Intersection](java/datastructures/Tree-Intersection-README.md)
+
+[Hash Map Left Join](java/datastructures/HashMap-Left-Join-README.md)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
