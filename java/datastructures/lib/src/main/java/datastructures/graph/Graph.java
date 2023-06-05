@@ -1,7 +1,6 @@
 package datastructures.graph;
 
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<T>>  // just in case you have Comparable data structures
 {
@@ -53,6 +52,50 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   {
     return numberOfVertices;
   }
+
+
+  public List<Vertex<T>> breadthFirst() {
+    List<Vertex<T>> orderVisited = new ArrayList<>();
+    Queue<Vertex<T>> queue = new LinkedList<>();
+    Set<Vertex<T>> visited = new HashSet<>();
+
+    List<Vertex<T>> vertices = getVertices();
+    if (vertices.isEmpty()) {
+      return orderVisited;
+    }
+
+    // We have to loop over every vertex in case some are not connected to anything else. This is sort of a silly thing since we essentially get our output from this method call, but the problem asked for no input arguments to start from.
+    for (Vertex<T> vertex : vertices) {
+      if (!visited.contains(vertex)) {
+        queue.add(vertex);
+        visited.add(vertex);
+
+        while (!queue.isEmpty()) {
+          Vertex<T> current = queue.poll();
+          orderVisited.add(current);
+          LinkedList<Edge<T>> neighbors = getNeighbors(current);
+          if (neighbors != null) {
+            for (Edge<T> edge : neighbors) {
+              Vertex<T> neighbor = edge.destination;
+              if (!visited.contains(neighbor)) {
+                queue.add(neighbor);
+                visited.add(neighbor);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // The problem statement wants this too I guess
+    for (Vertex<T> vertex : orderVisited) {
+      System.out.println(vertex.value);
+    }
+
+    return orderVisited;
+  }
+
+
 
   @Override
   public int compareTo(Graph<T> o)
