@@ -30,7 +30,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Binary Tree getMax](java/datastructures/Trees-Max-README.md)
 
-[Binary Tree Bread-First Traversal](java/datastructures/Trees-Breadth-First-README.md)
+[Binary Tree Breadth-First Traversal](java/datastructures/Trees-Breadth-First-README.md)
 
 [Insertion Sort](java/sorting/insertion/README.md)
 
@@ -47,6 +47,10 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 [Hash Map Left Join](java/datastructures/HashMap-Left-Join-README.md)
 
 [Graph Implementation](java/datastructures/Graph-README.md)
+
+[Graph Breadth-First](java/datastructures/Graph-Breadth-First-README.md)
+
+[Graph Business Trip](java/datastructures/Graph-Business-Trip-README.md)
 
 ## Repository Quick Tour and Usage
 
