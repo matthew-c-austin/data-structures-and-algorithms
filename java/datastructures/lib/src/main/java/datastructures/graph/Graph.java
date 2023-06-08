@@ -95,6 +95,44 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
     return orderVisited;
   }
 
+  public List<Vertex<T>> depthFirst() {
+    List<Vertex<T>> orderVisited = new ArrayList<>();
+    Stack<Vertex<T>> stack = new Stack<>();
+    Set<Vertex<T>> visited = new HashSet<>();
+
+    List<Vertex<T>> vertices = getVertices();
+    if (vertices.isEmpty()) {
+      return orderVisited;
+    }
+
+    for (Vertex<T> vertex : vertices) {
+      if (!visited.contains(vertex)) {
+        stack.push(vertex);
+        visited.add(vertex);
+
+        while (!stack.isEmpty()) {
+          Vertex<T> current = stack.pop();
+          orderVisited.add(current);
+          LinkedList<Edge<T>> neighbors = getNeighbors(current);
+          if (neighbors != null) {
+            for (Edge<T> edge : neighbors) {
+              Vertex<T> neighbor = edge.destination;
+              if (!visited.contains(neighbor)) {
+                stack.push(neighbor);
+                visited.add(neighbor);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    for (Vertex<T> vertex : orderVisited) {
+      System.out.println(vertex.value);
+    }
+
+    return orderVisited;
+  }
 
 
   @Override
