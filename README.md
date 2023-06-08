@@ -52,6 +52,8 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 [Graph Business Trip](java/datastructures/Graph-Business-Trip-README.md)
 
+[Graph Depth-First](java/datastructures/Graph-Depth-First-README.md)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
